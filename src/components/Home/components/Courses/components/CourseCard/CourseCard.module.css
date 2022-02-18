@@ -1,0 +1,31 @@
+.card {
+    width: 58vw;
+    border: 2px solid rgb(173, 209, 120);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    display: flex;
+}
+
+.mainInformation {
+    width: 40vw;
+}
+
+.secondInformation {
+  width: 20vw;
+  margin-left: 2vw;
+}
+
+.title {
+    font-size: 1.3vw;
+    padding-left: 1vw;
+}
+
+.description {
+    padding-left: 0.7vw;
+    font-size: 0.8vw;
+}
+
+.subtitle {
+    font-weight: 500;
+}
+

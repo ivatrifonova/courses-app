@@ -1,0 +1,7 @@
+.courses {
+    width: 61vw;
+    border: 2px solid grey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
