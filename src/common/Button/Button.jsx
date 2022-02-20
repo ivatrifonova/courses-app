@@ -1,8 +1,8 @@
 import styles from './Button.module.css';
 
-const Button = ({ buttonText, callback }) => {
+const Button = ({ buttonText, callback, className }) => {
 	return (
-		<button className={styles.button} onClick={callback}>
+		<button className={className} onClick={callback}>
 			{' '}
 			{buttonText}{' '}
 		</button>

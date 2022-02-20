@@ -1,15 +1,23 @@
-export const Input = ({ labelText, placeholderText, changeCallback }) => {
+export const Input = ({
+	labelText,
+	placeholderText,
+	changeCallback,
+	className,
+	labelClassName,
+	divClassName,
+}) => {
 	return (
-		<>
-			<label>
+		<div className={divClassName}>
+			<label className={labelClassName}>
 				{labelText}
 				<input
-					type='text'
+					className={className}
+					type={'text'}
 					name={labelText}
 					placeholder={placeholderText}
 					onChange={(event) => changeCallback(event.target.value)}
 				/>
 			</label>
-		</>
+		</div>
 	);
 };
