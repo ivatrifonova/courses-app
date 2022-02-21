@@ -5,3 +5,10 @@
     align-items: center;
     flex-direction: column;
 }
+
+.createCourseButton {
+    width: 8em;
+    height: 3em;
+    background-color: transparent;
+    border: 2px solid rgb(48, 70, 88);
+}

@@ -8,7 +8,7 @@ const Header = () => {
 			<Logo />
 			<div className={styles.logoutAndName}>
 				<p className={styles.name}> James </p>
-				<Button buttonText={'Logout'}></Button>
+				<Button className={styles.logoutButton} buttonText={'Logout'}></Button>
 			</div>
 		</header>
 	);

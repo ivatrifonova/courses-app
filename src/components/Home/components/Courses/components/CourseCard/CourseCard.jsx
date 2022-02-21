@@ -35,7 +35,7 @@ const CourseCard = ({ course }) => {
 					<span className={styles.subtitle}> Created: </span>{' '}
 					<span> {course.creationDate}</span>
 				</div>
-				<Button buttonText={'Show course'} />
+				<Button className={styles.showButton} buttonText={'Show course'} />
 			</div>
 		</div>
 	);

@@ -10,7 +10,10 @@ const Courses = () => {
 	return (
 		<div className={styles.courses}>
 			<div>
-				<Button buttonText={'Add new course'} />
+				<Button
+					className={styles.createCourseButton}
+					buttonText={'Add new course'}
+				/>
 			</div>
 			<div>
 				{courses.map((course) => (
