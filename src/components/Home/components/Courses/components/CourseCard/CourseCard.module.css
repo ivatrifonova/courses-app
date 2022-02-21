@@ -1,31 +1,49 @@
 .card {
-    width: 58vw;
+    width: 55em;
     border: 2px solid rgb(173, 209, 120);
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 1em;
+    margin-bottom: 1em;
     display: flex;
 }
 
 .mainInformation {
-    width: 40vw;
+    width: 40em;
 }
 
 .secondInformation {
-  width: 20vw;
-  margin-left: 2vw;
+  width: 20em;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: 1.3vw;
-    padding-left: 1vw;
+    font-size: 1.2em;
+    padding-left: 0.5em;
 }
 
 .description {
-    padding-left: 0.7vw;
-    font-size: 0.8vw;
+    padding-left: 0.5em;
+    font-size: 0.9em;
 }
 
 .subtitle {
     font-weight: 500;
 }
 
+.showButton {
+    width: 8em;
+    height: 3em;
+    margin-top: 1em;
+    background-color: transparent;
+    border: 2px solid rgb(57, 121, 76);
+    align-self: center;
+}
+.authors {
+    display: inline-block;
+    width: 12em;
+    height: 1.3em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
