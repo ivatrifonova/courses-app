@@ -1,0 +1,9 @@
+import { getAllCoursesService } from '../../Service/service';
+import { getAllCourses } from './actions';
+
+const getCourses = () => async (dispatch) => {
+	const courses = await getAllCoursesService();
+	dispatch(getAllCourses(courses));
+};
+
+export { getCourses };

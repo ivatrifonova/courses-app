@@ -11,9 +11,9 @@ const CourseCard = ({ course }) => {
 
 	useEffect(() => {
 		const formattedDuration = formatDuration(course.duration);
-		const formattedAuthors = formatAuthors(course.authors, mockedAuthorsList);
+		// const formattedAuthors = formatAuthors(course.authors, mockedAuthorsList);
 		setDuration(formattedDuration);
-		setAuthors(formattedAuthors);
+		// setAuthors(formattedAuthors);
 	}, [course.authors, course.duration]);
 
 	return (
@@ -25,7 +25,7 @@ const CourseCard = ({ course }) => {
 			<div className={styles.secondInformation}>
 				<div>
 					<span className={styles.subtitle}> Authors: </span>{' '}
-					<span> {authors}</span>
+					<span className={styles.authors}> {course.authors}</span>
 				</div>
 				<div>
 					<span className={styles.subtitle}> Duration: </span>{' '}
