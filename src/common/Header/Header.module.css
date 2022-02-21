@@ -3,16 +3,24 @@
     border: 2px solid red;
     display: flex;
     justify-content: space-between;
-    padding-right: 1vw;
+    padding-right: 1em;
 }
 
 .logoutAndName {
-    width: 10vw;
+    width: 10em;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
 .name {
-   font-size: 1.2vw; 
+   font-size: 1em; 
+   margin-right: 1em;
+}
+
+.logoutButton {
+    width: 8em;
+    height: 3em;
+    background-color: transparent;
+    border: 2px solid rgb(57, 121, 76);
 }

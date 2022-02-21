@@ -25,7 +25,7 @@ const CourseCard = ({ course }) => {
 			<div className={styles.secondInformation}>
 				<div>
 					<span className={styles.subtitle}> Authors: </span>{' '}
-					<span> {authors}</span>
+					<span className={styles.authors}> {authors}</span>
 				</div>
 				<div>
 					<span className={styles.subtitle}> Duration: </span>{' '}
@@ -35,7 +35,7 @@ const CourseCard = ({ course }) => {
 					<span className={styles.subtitle}> Created: </span>{' '}
 					<span> {course.creationDate}</span>
 				</div>
-				<Button buttonText={'Show course'} />
+				<Button className={styles.showButton} buttonText={'Show course'} />
 			</div>
 		</div>
 	);
