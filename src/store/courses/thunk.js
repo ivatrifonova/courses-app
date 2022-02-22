@@ -1,4 +1,4 @@
-import { getAllCoursesService } from '../../Service/service';
+import { getAllCoursesService } from '../../services/service';
 import { getAllCourses } from './actions';
 
 const getCourses = () => async (dispatch) => {
