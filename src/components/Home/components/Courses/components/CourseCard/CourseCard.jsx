@@ -3,18 +3,15 @@ import styles from './CourseCard.module.css';
 import { useEffect, useState } from 'react';
 import { formatAuthors } from '../../../../../../helpers/formatAuthors';
 import { formatDuration } from '../../../../../../helpers/formatDuration';
-import { mockedAuthorsList } from '../../../../../../constants';
-import { useSelector } from 'react-redux';
-import { getAuthors } from '../../../../../../store/authors/selectors';
 
 const CourseCard = ({ course, storeAuthors }) => {
 	const [duration, setDuration] = useState(0);
 	const [authors, setAuthors] = useState([]);
+
 	useEffect(() => {
-		const formattedDuration = formatDuration(course.duration);
-		setDuration(formattedDuration);
+		setDuration(formatDuration(course.duration));
 		setAuthors(formatAuthors(course.authors, storeAuthors));
-	}, [storeAuthors]);
+	}, [course.authors, course.duration, storeAuthors]);
 
 	return (
 		<div className={styles.card}>
