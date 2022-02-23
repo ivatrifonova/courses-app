@@ -1,4 +1,4 @@
-import { GET_ALL_COURSES } from './actions';
+import { GET_ALL_COURSES, ADD_COURSE } from './actions';
 
 const coursesInitialState = [];
 
@@ -8,6 +8,9 @@ export const courseReducer = (courses = coursesInitialState, action) => {
 	switch (type) {
 		case GET_ALL_COURSES: {
 			return payload;
+		}
+		case ADD_COURSE: {
+			return [...courses, payload];
 		}
 		default: {
 			return courses;

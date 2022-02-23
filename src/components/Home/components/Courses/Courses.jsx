@@ -4,15 +4,19 @@ import Button from '../../../../common/Button/Button';
 import { useSelector } from 'react-redux';
 import { getCourses } from '../../../../store/courses/selectors';
 import { getAuthors } from '../../../../store/authors/selectors';
+import { useNavigate } from 'react-router-dom';
 const Courses = () => {
 	const storeAuthors = useSelector(getAuthors);
 	const courses = useSelector(getCourses);
+	const navigate = useNavigate();
+
 	return (
 		<div className={styles.courses}>
 			<div>
 				<Button
 					className={styles.createCourseButton}
 					buttonText={'Add new course'}
+					callback={() => navigate('createCourse')}
 				/>
 			</div>
 			<div>

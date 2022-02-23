@@ -1,0 +1,17 @@
+.authorDiv {
+    width: 13em;
+    height: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.addAuthorButton {
+    width: 9em;
+    height: 2em;
+    background-color: transparent;
+    border: 2px solid rgb(57, 121, 76);
+}
+
+.name {
+    width: 4em;
+}
