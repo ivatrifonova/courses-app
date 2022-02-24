@@ -1,0 +1,34 @@
+.courseInfoWrapper {
+   width: 61vw;
+   border: 2px solid rgb(205, 233, 205); 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.backButton {
+    background-color: transparent;
+    border: 0;
+    width: 10em;
+    height: 4em;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.title {
+    text-align: center;
+}
+
+.innerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 55em;
+    margin-bottom: 2em;
+}
+.description {
+    width: 33em;
+}
+
+.subtitle {
+    font-weight: 700;
+}

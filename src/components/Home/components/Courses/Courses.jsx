@@ -9,7 +9,7 @@ const Courses = () => {
 	const storeAuthors = useSelector(getAuthors);
 	const courses = useSelector(getCourses);
 	const navigate = useNavigate();
-
+	console.log(courses);
 	return (
 		<div className={styles.courses}>
 			<div>

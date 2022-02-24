@@ -3,10 +3,11 @@ import styles from './CourseCard.module.css';
 import { useEffect, useState } from 'react';
 import { formatAuthors } from '../../../../../../helpers/formatAuthors';
 import { formatDuration } from '../../../../../../helpers/formatDuration';
-
+import { useNavigate } from 'react-router-dom';
 const CourseCard = ({ course, storeAuthors }) => {
 	const [duration, setDuration] = useState(0);
 	const [authors, setAuthors] = useState([]);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		setDuration(formatDuration(course.duration));
@@ -32,7 +33,11 @@ const CourseCard = ({ course, storeAuthors }) => {
 					<span className={styles.subtitle}> Created: </span>{' '}
 					<span> {course.creationDate}</span>
 				</div>
-				<Button className={styles.showButton} buttonText={'Show course'} />
+				<Button
+					className={styles.showButton}
+					callback={() => navigate(`/courses/${course.id}`)}
+					buttonText={'Show course'}
+				/>
 			</div>
 		</div>
 	);
