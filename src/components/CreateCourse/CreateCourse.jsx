@@ -77,6 +77,7 @@ export const CreateCourse = () => {
 			creationDate: new Date().toDateString(),
 			duration: duration,
 			authors: addedAuthors.map((author) => author.id),
+			id: title + new Date().toDateString(),
 		};
 		dispatch(addCourse(course));
 		navigate('/');
