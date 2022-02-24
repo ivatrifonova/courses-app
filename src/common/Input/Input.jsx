@@ -5,6 +5,7 @@ export const Input = ({
 	className,
 	labelClassName,
 	divClassName,
+	type,
 }) => {
 	return (
 		<div className={divClassName}>
@@ -12,7 +13,7 @@ export const Input = ({
 				{labelText}
 				<input
 					className={className}
-					type={'text'}
+					type={type}
 					name={labelText}
 					placeholder={placeholderText}
 					onChange={(event) => changeCallback(event.target.value)}
