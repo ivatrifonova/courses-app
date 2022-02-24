@@ -9,6 +9,7 @@ import { Author } from './components/Author/Author';
 import { addAuthor } from '../../store/authors/actions';
 import { addCourse } from '../../store/courses/actions';
 import { useNavigate } from 'react-router-dom';
+import { formatDuration } from '../../helpers/formatDuration';
 
 export const CreateCourse = () => {
 	const dispatch = useDispatch();
@@ -53,6 +54,10 @@ export const CreateCourse = () => {
 	};
 
 	const addAuthorToStore = () => {
+		if (!authorName) {
+			alert('Please fill all of the inputs before submit!');
+			return;
+		}
 		const author = {
 			name: authorName,
 			id: authorName + new Date().toDateString(),
@@ -62,6 +67,10 @@ export const CreateCourse = () => {
 	};
 
 	const handleCreateCourseClick = () => {
+		if (!title || !description || duration < 60 || !addedAuthors.length) {
+			alert('Please fill all of the inputs before submit!');
+			return;
+		}
 		const course = {
 			title: title,
 			description: description,
@@ -80,6 +89,7 @@ export const CreateCourse = () => {
 				<div className={styles.createCourse}>
 					<div className={styles.infoSection}>
 						<Input
+							type={'text'}
 							value={title}
 							changeCallback={setTitle}
 							className={styles.titleInput}
@@ -102,6 +112,7 @@ export const CreateCourse = () => {
 						<div className={styles.authorSubsection}>
 							<h3>Add Author</h3>
 							<Input
+								type={'text'}
 								value={authorName}
 								changeCallback={setAuthorName}
 								divClassName={styles.inputDiv}
@@ -116,6 +127,7 @@ export const CreateCourse = () => {
 							/>
 							<h3>Duration</h3>
 							<Input
+								type={'number'}
 								value={duration}
 								changeCallback={setDuration}
 								className={styles.durationInput}
@@ -123,7 +135,7 @@ export const CreateCourse = () => {
 								labelText={'Duration'}
 								placeholderText={'Enter duration'}
 							/>
-							<h4>Duration</h4>
+							<h4>Duration: {formatDuration(duration)}</h4>
 						</div>
 						<div className={styles.authorSubsection}>
 							<h3>Authors</h3>
